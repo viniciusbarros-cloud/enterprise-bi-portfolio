@@ -27,6 +27,6 @@ Para suportar uma tomada de decisão rápida e performática, a seguinte arquite
 ## 💡 Engenharia de UX/UI: A Árvore de Decomposição
 O grande destaque técnico e visual deste painel é a implementação da **Árvore de Decomposição (*Decomposition Tree*)**. 
 
-![Análise Dinâmica](image_26e825.png)
+![Análise Dinâmica](tree_26e825.png)
 
 Em vez de prender o usuário em relatórios estáticos, essa funcionalidade permite que o gestor clique no faturamento total e escolha dinamicamente por qual caminho quer quebrar o dado (ex: *Quero abrir o faturamento primeiro por Rota, depois ver qual Marca de caminhão rodou nela, e por fim qual veículo específico performou pior*). Isso reduz o tempo de descoberta de gargalos financeiros de horas para poucos cliques.
