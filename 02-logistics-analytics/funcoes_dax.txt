@@ -1,0 +1,23 @@
+% Atrasado = [Viagens Atrasadas]/[Qtd Viagens]
+
+% No Prazo = [Viagens no Prazo]/[Qtd Viagens]
+
+Custo = SUM(BaseLogistica[Custo Frete])
+
+Km Rodados = SUM(BaseLogistica[Km])
+
+Lucro = [Receita]-[Custo]
+
+Qtd Viagens = COUNTROWS(BaseLogistica)
+
+Receita = SUM(BaseLogistica[Valor do Frete Líquido])
+
+Viagens Atrasadas = CALCULATE(
+    COUNTROWS(BaseLogistica),
+    BaseLogistica[Status Entrega]="Atrasado"
+)
+
+Viagens no Prazo = 
+CALCULATE(
+    COUNTROWS(BaseLogistica),
+    BaseLogistica[Status Entrega]="No Prazo")
