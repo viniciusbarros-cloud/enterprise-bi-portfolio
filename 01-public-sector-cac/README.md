@@ -1,8 +1,6 @@
 # ⚖️ Analytics de Produtividade e Compliance (Polícia Federal / SINARM)
 
-![Dashboard PF]([COLE_O_LINK_DA_IMAGEM_AQUI])
-
-*(Adicione aqui os prints extras mostrando a navegação dos menus secundários, se desejar)*
+<img src="01-public-sector-cac/download.gif" width="700" alt="Demonstração do Dashboard em Loop">
 
 ## 📌 O Desafio de Negócio
 No setor público e regulatório, o controle de processos, especialmente relacionados à aquisição de armamentos e registros (CACs), exige altíssima precisão e controle de prazos. O objetivo deste painel foi criar uma ferramenta de gestão à vista para monitorar o **fluxo de processos, gargalos operacionais e SLA de análise técnica**.
