@@ -1,23 +1,32 @@
 # 🚚 Hub de Logística e Performance de Frota
 
-![Dashboard Logística]([COLE_O_LINK_DA_IMAGEM_AQUI])
+![Dashboard Logística Principal](image_26ef27.png)
 
 ## 📌 O Desafio de Negócio
-Uma operação logística gera um volume massivo de dados diariamente. 
-O objetivo deste projeto foi consolidar dados de fretes, custos de manutenção, rotas e performance de entrega para responder à pergunta central: **"Quais veículos e rotas estão gerando o maior retorno financeiro com a melhor pontualidade?"**
+Uma operação logística gera um volume massivo de dados transacionais diariamente (fretes, pedágios, combustíveis, tempos de pátio). O objetivo central deste projeto foi consolidar dados de faturamento de fretes, custos de manutenção, cubagem e rotas operacionais para responder à pergunta mais crítica da diretoria: **"Quais combinações de veículos, marcas e rotas trazem a maior margem líquida com o menor índice de atraso?"**
 
 ## 🏗️ Solução Analítica e Engenharia de Dados
-Para suportar o painel, a seguinte arquitetura de dados foi desenvolvida:
+Para suportar uma tomada de decisão rápida e performática, a seguinte arquitetura de modelagem foi desenvolvida no Power BI / Excel:
 
-1. **Extração e Limpeza (ETL):** 
-   * Tratamento de inconsistências nos registros de placas e motoristas.
-   * Padronização das datas de saída e entrega para cálculo preciso do SLA (*Service Level Agreement*).
+1. **Tratamento de Dados e ETL (Power Query):** * Saneamento e padronização de registros de texto (ex: placas de veículos e nomes de motoristas duplicados ou mal preenchidos).
+   * Normalização de tabelas de custos operacionais e conversão de tipos de dados para evitar erros de arredondamento em valores monetários.
+   * Criação de colunas calculadas de tempo para mensurar a diferença exata entre a data de entrega prevista e a real.
+
 2. **Modelagem de Dados (Star Schema):**
-   * Criação da tabela Fato (`fViagens`) contendo métricas aditivas (custo, receita, distância).
-   * Criação das tabelas Dimensão (`dVeiculo`, `dMotorista`, `dRota`, `dCalendario`) para permitir a filtragem e o slice-and-dice da informação.
-3. **Métricas Avançadas (DAX):**
-   * Cálculo de **Margem de Lucro (%):** `DIVIDE([Receita Total] - [Custo Total], [Receita Total])`
-   * Cálculo de **Eficiência de Entrega (% no Prazo):** Lógica condicional comparando `Data Entrega Real` vs `Data Entrega Prevista`.
+   * **Tabela Fato (`fViagens`):** Centraliza as métricas aditivas e transacionais (Volume transportado, Valor do Frete, Custo de Combustível, Km Rodados).
+   * **Tabelas Dimensão (`dVeiculos`, `dMotoristas`, `dRotas`, `dCalendario`):** Permitem a filtragem cruzada e o *slice-and-dice* dos dados por qualquer cenário de negócio.
 
-## 💡 Destaque de UX/UI
-O principal diferencial deste painel é o uso da **Árvore de Decomposição (*Decomposition Tree*)**. Ela permite que o usuário gerencial faça um "drill-down" interativo, abrindo a Receita Total em quebras sucessivas por Marca do Veículo, Placa e Rota, facilitando a identificação imediata de gargalos ou anomalias financeiras.
+3. **Métricas de Negócio Avançadas (DAX):**
+   * **Margem de Lucro Real:** ```dax
+     Margem Lucro % = DIVIDE([Receita Frete Total] - [Custo Operacional Total], [Receita Frete Total], 0)
+     ```
+   * **Percentual de SLA de Entrega:** Mede a eficiência de pontualidade da frota rodoviária.
+
+---
+
+## 💡 Engenharia de UX/UI: A Árvore de Decomposição
+O grande destaque técnico e visual deste painel é a implementação da **Árvore de Decomposição (*Decomposition Tree*)**. 
+
+![Análise Dinâmica](image_26e825.png)
+
+Em vez de prender o usuário em relatórios estáticos, essa funcionalidade permite que o gestor clique no faturamento total e escolha dinamicamente por qual caminho quer quebrar o dado (ex: *Quero abrir o faturamento primeiro por Rota, depois ver qual Marca de caminhão rodou nela, e por fim qual veículo específico performou pior*). Isso reduz o tempo de descoberta de gargalos financeiros de horas para poucos cliques.
