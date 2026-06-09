@@ -82,4 +82,4 @@ O grande destaque técnico e visual deste painel é a implementação da **Árvo
 
 ![Análise Dinâmica](tree_26ef27.png)
 
-Em vez de prender o usuário em relatórios estáticos, essa funcionalidade permite que o gestor clique no faturamento ou lucro total e escolha dinamicamente por qual caminho quer quebrar o dado (ex: *Quero abrir a receita primeiro por Rota, depois ver qual Marca de caminhão rodou nela, e por fim qual veículo específico performou pior*). Isso reduz o tempo de descoberta de gargalos operacionais de horas para poucos cliques.
+Em vez de prender o usuário em relatórios estáticos, essa funcionalidade permite que o gestor clique no faturamento ou no lucro total e escolha dinamicamente por qual caminho quer quebrar o dado (ex.: *Quero abrir a receita primeiro por Marca e, por fim, qual veículo específico performou pior*). Isso reduz o tempo de descoberta de gargalos operacionais de horas para poucos cliques.
