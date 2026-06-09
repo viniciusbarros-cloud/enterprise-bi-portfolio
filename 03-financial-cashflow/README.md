@@ -1,6 +1,6 @@
 # 💰 Engenharia Financeira & Fluxo de Caixa
 
-![Dashboard Financeiro]([COLE_O_LINK_DA_IMAGEM_AQUI])
+![Dashboard Financeiro]([fluxocaixa.gif])
 
 ## 📌 O Desafio de Negócio
 Muitas empresas falham por não terem visibilidade clara de suas entradas e saídas. Este projeto substitui fluxos de caixa baseados em planilhas manuais por um modelo automatizado, capaz de mostrar a saúde financeira, despesas operacionais e margem de lucro de forma clara e auditável.
