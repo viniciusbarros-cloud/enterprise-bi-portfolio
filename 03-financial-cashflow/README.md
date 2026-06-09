@@ -68,6 +68,6 @@ LOOKUPVALUE(
 
 A melhor prática de visualização para análises financeiras é o **Gráfico de Cascata (*Waterfall*)**. 
 
-![Painel Estático](image_27455b.png)
+![Painel Estático](water.png)
 
 Neste painel, ele foi implementado para ilustrar visualmente a "ponte" entre o saldo inicial e o saldo final. O gestor consegue ver exatamente qual categoria "puxou" o saldo para baixo ao longo do mês, permitindo cortes cirúrgicos de custos com base em dados, e não em intuição.
