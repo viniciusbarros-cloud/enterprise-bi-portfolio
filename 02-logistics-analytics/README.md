@@ -16,17 +16,70 @@ Para suportar uma tomada de decisão rápida e performática, a seguinte arquite
    * **Tabela Fato (`fViagens`):** Centraliza as métricas aditivas e transacionais (Volume transportado, Valor do Frete, Custo de Combustível, Km Rodados).
    * **Tabelas Dimensão (`dVeiculos`, `dMotoristas`, `dRotas`, `dCalendario`):** Permitem a filtragem cruzada e o *slice-and-dice* dos dados por qualquer cenário de negócio.
 
-3. **Métricas de Negócio Avançadas (DAX):**
-   * **Margem de Lucro Real:** ```dax
-     Margem Lucro % = DIVIDE([Receita Frete Total] - [Custo Operacional Total], [Receita Frete Total], 0)
-     ```
-   * **Percentual de SLA de Entrega:** Mede a eficiência de pontualidade da frota rodoviária.
+---
+
+## 🧮 Repositório de Métricas e Lógica de Negócio (DAX)
+
+Todas as regras de negócio foram traduzidas utilizando medidas explícitas em DAX, garantindo a eficiência do motor de cálculo e a consistência dos dados em qualquer nível de agregação visual.
+
+### 1. Volumetria e Distância
+Métricas fundamentais para o entendimento da escala operacional e distribuição de frota.
+
+```dax
+Qtd Viagens = COUNTROWS(BaseLogistica)
+```
+
+```dax
+Km Rodados = SUM(BaseLogistica[Km])
+```
+
+### 2. Engenharia Financeira
+Consolidação de receitas, despesas operacionais diretas e o resultado financeiro líquido das viagens realizadas.
+
+```dax
+Receita = SUM(BaseLogistica[Valor do Frete Líquido])
+```
+
+```dax
+Custo = SUM(BaseLogistica[Custo Frete])
+```
+
+```dax
+Lucro = [Receita] - [Custo]
+```
+
+### 3. Performance de SLA (Service Level Agreement)
+Lógicas para isolar o comportamento das entregas através de modificadores de contexto de filtro (`CALCULATE`) e indicadores de eficiência percentual.
+
+```dax
+Viagens no Prazo = 
+CALCULATE(
+    COUNTROWS(BaseLogistica),
+    BaseLogistica[Status Entrega] = "No Prazo"
+)
+```
+
+```dax
+Viagens Atrasadas = 
+CALCULATE(
+    COUNTROWS(BaseLogistica),
+    BaseLogistica[Status Entrega] = "Atrasado"
+)
+```
+
+```dax
+% No Prazo = [Viagens no Prazo] / [Qtd Viagens]
+```
+
+```dax
+% Atrasado = [Viagens Atrasadas] / [Qtd Viagens]
+```
 
 ---
 
 ## 💡 Engenharia de UX/UI: A Árvore de Decomposição
 O grande destaque técnico e visual deste painel é a implementação da **Árvore de Decomposição (*Decomposition Tree*)**. 
 
-![Análise Dinâmica](tree_26ef27.png)
+![Análise Dinâmica](tree_26e825.png)
 
-Em vez de prender o usuário em relatórios estáticos, essa funcionalidade permite que o gestor clique no faturamento total e escolha dinamicamente por qual caminho quer quebrar o dado (ex: *Quero abrir o faturamento primeiro por Rota, depois ver qual Marca de caminhão rodou nela, e por fim qual veículo específico performou pior*). Isso reduz o tempo de descoberta de gargalos financeiros de horas para poucos cliques.
+Em vez de prender o usuário em relatórios estáticos, essa funcionalidade permite que o gestor clique no faturamento ou lucro total e escolha dinamicamente por qual caminho quer quebrar o dado (ex: *Quero abrir a receita primeiro por Rota, depois ver qual Marca de caminhão rodou nela, e por fim qual veículo específico performou pior*). Isso reduz o tempo de descoberta de gargalos operacionais de horas para poucos cliques.
