@@ -37,3 +37,13 @@ Para que estes dashboards operassem com alta performance, foram aplicadas as seg
 ## 📦 Outros Projetos Inclusos no Hub
 * **RH Analytics:** Indicadores de turnover, folha salarial total e distribuição de headcount por cargo/área.
 * **Dashboard de Produção:** Monitoramento de eficiência industrial (OEE simplificado), indicando horas produtivas vs. paradas e volume de rejeitos.
+
+---
+## 📂 Estrutura do Repositório
+
+├── .github/                  # Imagens e prints dos dashboards
+├── 01-public-sector-cac/   # Arquivo .pbix / Excel + Mini README
+├── 02-logistics-analytics/     # Arquivo .pbix / Excel + Mini README
+├── 03-financial-cashflow/    # Arquivo .pbix / Excel + Mini README
+├── 04-additional-projects/   # Subpastas com outros projetos para RH, Produção, etc.
+└── README.md                 # O Guia Mestre do Portfólio (Abaixo)
