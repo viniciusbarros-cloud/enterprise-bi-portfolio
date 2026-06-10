@@ -41,9 +41,12 @@ Para que estes dashboards operassem com alta performance, foram aplicadas as seg
 ---
 ## 📂 Estrutura do Repositório
 
+Para facilitar a navegação e auditoria técnica, o projeto está estruturado de forma modular conforme o ecossistema abaixo:
+
+```text
 ├── .github/                  # Imagens e prints dos dashboards
-├── 01-public-sector-cac/   # Arquivo .pbix / Excel + Mini README
-├── 02-logistics-analytics/     # Arquivo .pbix / Excel + Mini README
+├── 01-public-sector-cac/     # Arquivo .pbix + Mini README
+├── 02-logistics-analytics/    # Arquivo .pbix / Excel + Mini README
 ├── 03-financial-cashflow/    # Arquivo .pbix / Excel + Mini README
 ├── 04-additional-projects/   # Subpastas com outros projetos para RH, Produção, etc.
-└── README.md                 # O Guia Mestre do Portfólio (Abaixo)
+```
