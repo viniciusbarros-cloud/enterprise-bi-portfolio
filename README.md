@@ -39,6 +39,21 @@ Para que estes dashboards operassem com alta performance, foram aplicadas as seg
 * **Dashboard de Produção:** Monitoramento de eficiência industrial (OEE simplificado), indicando horas produtivas vs. paradas e volume de rejeitos.
 
 ---
+## 🚀 Portfólio de Projetos (Navegação Rápida)
+
+Clique nos links abaixo para acessar o painel completo, a documentação técnica (DAX/SQL) e os detalhes de arquitetura de cada projeto corporativo:
+
+* **[01. Setor Público & Compliance (CAC)](./01-public-sector-cac/)**
+  * *Foco:* Gestão de SLAs, conformidade e navegação UX/UI avançada.
+* **[02. Hub de Logística & Performance](./02-logistics-analytics/)**
+  * *Foco:* Faturamento de fretes, controle de frota e Árvores de Decomposição.
+* **[03. Engenharia Financeira & Fluxo de Caixa](./03-financial-cashflow/)**
+  * *Foco:* Inteligência de tempo, saldos móveis acumulados e gráfico de cascata (*Waterfall*).
+* **[04. Projetos Adicionais (People Analytics & Produção)](./04-projetos-adicionais/)**
+  * *Foco:* Gestão de massa salarial (RH) e Eficiência Operacional/OEE (Manufatura).
+
+---
+
 ## 📂 Estrutura do Repositório
 
 Para facilitar a navegação e auditoria técnica, o projeto está estruturado de forma modular conforme o ecossistema abaixo:
