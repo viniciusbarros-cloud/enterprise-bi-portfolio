@@ -1,4 +1,4 @@
-# 📂 Projetos Adicionais: People Analytics & Manufatura
+# 📂 Projetos Adicionais
 
 Esta seção compila painéis táticos e operacionais desenvolvidos para resolver dores específicas de departamentos de Recursos Humanos e Chão de Fábrica, demonstrando versatilidade na análise de diferentes modelos de negócio.
 
