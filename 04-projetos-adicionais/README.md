@@ -8,7 +8,7 @@ Esta seção compila painéis táticos e operacionais desenvolvidos para resolve
 
 O departamento de RH deixou de ser apenas operacional para se tornar um parceiro estratégico. Este modelo analítico foi desenvolvido para monitorar o ciclo de vida do colaborador, custos de folha e alocação de talentos.
 
-![Dashboard de RH](image_26d4c5.jpg)
+![Dashboard de RH](image_26d4c5.png)
 
 ### 📌 Focos da Análise
 * **Gestão de Headcount e Turnover:** Acompanhamento histórico de contratações por ano, mapeando o volume de força de trabalho distribuído por cada área da empresa (Administrativo, Comercial, Operações, Logística e Financeiro).
