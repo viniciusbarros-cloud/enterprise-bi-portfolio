@@ -15,8 +15,6 @@ O departamento de RH deixou de ser apenas operacional para se tornar um parceiro
 * **Engenharia de Cargos e Salários:** Análise do custo total de folha (R$ 2,7 Mi) cruzado com os níveis hierárquicos (Gerente, Estagiário, Diretor, Analista), permitindo identificar distorções na média salarial.
 * **Eficiência Operacional (Horas Extras):** Implementação de *Tooltips* (dicas de ferramenta dinâmicas) para inspecionar rapidamente o volume e o custo financeiro de horas extras por cargo, isolando gargalos de sobrecarga de trabalho.
 
-![Análise de Níveis e Salários](image_26d98.png)
-
 ---
 
 ## ⚙️ 2. OEE & Produção Industrial (Manufatura)
