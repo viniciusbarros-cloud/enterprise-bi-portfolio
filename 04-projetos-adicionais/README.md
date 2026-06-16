@@ -21,9 +21,9 @@ O departamento de RH deixou de ser apenas operacional para se tornar um parceiro
 
 Na indústria, cada minuto de máquina parada ou produto defeituoso impacta diretamente a margem do negócio. Este painel foi construído focado nos princípios de **OEE (*Overall Equipment Effectiveness*)**.
 
-![Dashboard de Produção](image_274615.png)
+![Dashboard de Produção](274615.png)
 
 ### 📌 Focos da Análise
 * **Volume e Qualidade:** Acompanhamento do total de peças produzidas versus a quantidade de itens rejeitados (refugo), gerando o indicador exato de Qualidade da operação.
-* **Disponibilidade de Máquina:** Monitoramento rigoroso do tempo de ciclo, cruzando **Horas Produtivas** contra **Horas Paradas**. O ponteiro de Disponibilidade (82,66%) indica o quão perto a fábrica está da sua capacidade máxima teórica.
+* **Disponibilidade de Máquina:** Monitoramento rigoroso do tempo de ciclo, cruzando **Horas Produtivas** contra **Horas Paradas**. O ponteiro de Disponibilidade (77,69%) indica o quão perto a fábrica está da sua capacidade máxima teórica.
 * **Sazonalidade e Turnos:** Histórico de produção mensal filtrável por operador, permitindo avaliar a performance individual e a consistência da linha de montagem ao longo do ano.
